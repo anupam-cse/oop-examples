@@ -1,0 +1,22 @@
+class animal:
+ type = "mammal"
+ 
+class dog(animal):
+ breed = "labrador"
+
+class bird(animal):
+ type = "bird"
+
+class eagle(animal, bird):
+ species = "eagle"
+
+>>> my_eagle = eagle()
+>>> my_eagle.type
+
+animal
+
+As you can see, order matters when dealing with multiple inheritances. When
+Python tries to resolve where a method or attribute is defined, it begins with the main
+class and then continues through the inherited classes in order from left to right until it
+finds the first instance of said method or attribute. In the above case, the correct order of
+inheritance should be class eagle(bird, animal).
