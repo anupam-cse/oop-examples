@@ -1,0 +1,11 @@
+class animal:
+ type = "mammal"
+class dog(animal):
+ breed = "labrador"
+Overriding Class Attributes
+class bird(animal):
+ type = "bird"
+ 
+>>> my_bird = bird()
+>>> my_bird.type
+bird
