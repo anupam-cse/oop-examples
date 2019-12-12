@@ -1,0 +1,57 @@
+Encapsulation is one of the fundamentals of OOP. OOP enables us to hide the complexity
+of the internal working of the object which is advantageous to the developer in the
+following ways:
+  
+   Simplifies and makes it easy to understand to use an object without knowing the
+internals.
+   Any change can be easily manageable.
+
+Object-oriented programming relies heavily on encapsulation. The terms encapsulation
+and abstraction (also called data hiding) are often used as synonyms. They are nearly
+synonymous, as abstraction is achieved through encapsulation.
+Encapsulation provides us the mechanism of restricting the access to some of the object’s
+components, this means that the internal representation of an object can’t be seen from
+outside of the object definition. Access to this data is typically achieved through special
+methods: Getters and Setters. 
+
+
+This data is stored in instance attributes and can be manipulated from anywhere outside
+the class. To secure it, that data should only be accessed using instance methods. Direct
+access should not be permitted.
+
+class MyClass(object):
+ def setAge(self, num):
+    self.age = num
+ def getAge(self):
+    return self.age
+zack = MyClass()
+zack.setAge(45)
+
+print(zack.getAge())
+zack.setAge("Fourty Five")
+print(zack.getAge())
+
+
+Output
+You can observe the following output when you execute the code given above:
+
+45
+Fourty Five
+
+The data should be stored only if it is correct and valid, using Exception handling
+constructs. As we can see above, there is no restriction on the user input to setAge()
+method. It could be a string, a number, or a list. So we need to check onto above code to
+ensure correctness of being stored.
+
+class MyClass(object):
+ def setAge(self, num):
+  self.age = num
+ def getAge(self):
+  return self.age
+zack = MyClass()
+zack.setAge(45)
+
+
+print(zack.getAge())
+zack.setAge("Fourty Five")
+print(zack.getAge())
