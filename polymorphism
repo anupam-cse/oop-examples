@@ -1,0 +1,22 @@
+class dog:
+ def talk(self):
+  print("bark")
+
+class cat:
+ def talk(self):
+  print("meow")
+ 
+def speak(animal):
+ animal.talk()
+
+From here, you will get different behavior from the function speak() based on which
+type of animal you hand in as a parameter.
+
+Polymorphic Behavior
+
+>>> my_dog = dog()
+>>> my_cat = cat()
+>>> speak(my_dog)
+bark
+>>> speak(my_cat)
+meow
