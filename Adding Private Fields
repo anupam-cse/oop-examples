@@ -1,0 +1,19 @@
+Adding Private Fields
+wish to have some parts of your class private—that is, not accessible from other
+pieces of code.
+
+Creating a Private Variable
+
+class priv_vars:
+ __a__ = "This is a private variable"
+
+There is a special form of a private name that induces Python to rename the element
+using a system of name mangling. If you have an element that may have the same name
+as some other element, you can add at least two leading underscore characters and at
+most one trailing underscore. Python will then prepend the class name to the element
+name. For example, if you had a class like
+
+class my_class1:
+ __a_ = 1
+
+the attribute __a_ would be renamed as _my_class__a_ in order to avoid name collision.
