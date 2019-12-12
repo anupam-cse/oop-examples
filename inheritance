@@ -1,0 +1,19 @@
+Inheriting from a Class
+
+class animal:
+ type = "mammal"
+class dog(animal):
+ breed = "labrador"
+ 
+ 
+>>> my_dog = dog()
+>>> my_dog.breed
+labrador
+>>> my_dog.type
+mammal
+
+As you can see, the class dog inherits the attribute of the animal type. The way
+methods and attributes are resolved is that the main class is checked first to see if it exists
+there. If it doesn't, then Python will check any inherited class to see if the attribute or
+method exists there. This means that you can override inherited methods or attributes
+with your own version
